@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #f8f9fb;
+    color: #0f172a;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 3D Emblem Perspective & Facet Geometry */
+.ev-scene {
+  perspective: 720px;
+}
+
+.ev-cube {
+  transform-style: preserve-3d;
+  transition: transform 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes ev-gentle-orbit {
+  0% {
+    transform: rotateX(-16deg) rotateY(-24deg);
+  }
+  50% {
+    transform: rotateX(-20deg) rotateY(16deg);
+  }
+  100% {
+    transform: rotateX(-16deg) rotateY(-24deg);
+  }
+}
+
+.ev-cube-idle {
+  animation: ev-gentle-orbit 9s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ev-cube-idle {
+    animation: none;
+    transform: rotateX(-16deg) rotateY(-24deg);
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

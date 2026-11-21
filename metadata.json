@@ -1,0 +1,6 @@
+{
+  "name": "EXAM VERSE",
+  "description": "EXAM VERSE is a dedicated e-commerce book marketplace for Engineering, GATE, Government Job Examination, and Tech Interview preparation guides.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
